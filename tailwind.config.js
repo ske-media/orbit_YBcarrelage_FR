@@ -3,6 +3,12 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      fontFamily: {
+        'heading': ['League Spartan', 'sans-serif'],
+        'subheading': ['Questrial', 'sans-serif'],
+        'body': ['DM Sans', 'sans-serif'],
+        'accent': ['Alfa Slab One', 'cursive'],
+      },
       colors: {
         khaki: '#A99F91',
         charcoal: '#5DAE8B',

@@ -62,11 +62,11 @@ const Header = () => {
 
           {/* Contact Button */}
           <a
-            href="tel:+3370151468"
+            href="tel:+33770151468"
             className="hidden md:flex items-center px-6 py-3 bg-goldenrod/90 backdrop-blur-sm text-white rounded-lg hover:bg-goldenrod transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
           >
             <Phone size={18} className="mr-2" />
-            <span className="group-hover:tracking-wider transition-all duration-300">+33 70 15 14 68</span>
+            <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
           </a>
         </div>
 
@@ -86,12 +86,12 @@ const Header = () => {
                 </a>
               ))}
               <a
-                href="tel:+3370151468"
+                href="tel:+33770151468"
                 className="flex items-center px-4 py-3 text-goldenrod hover:text-white bg-goldenrod/20 hover:bg-goldenrod rounded-lg transition-all duration-300 group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Phone size={18} className="mr-2" />
-                <span className="group-hover:tracking-wider transition-all duration-300">+33 70 15 14 68</span>
+                <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
               </a>
             </div>
           </div>

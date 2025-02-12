@@ -18,8 +18,6 @@ const Header = () => {
   const menuItems = [
     { label: 'Accueil', href: '#home' },
     { label: 'Services', href: '#services' },
-    { label: 'Spécialisation', href: '#specialization' },
-    { label: 'Tarifs', href: '#pricing' },
     { label: 'Réalisations', href: '#portfolio' },
     { label: 'Témoignages', href: '#testimonials' },
     { label: 'Contact', href: '#contact' },

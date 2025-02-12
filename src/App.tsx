@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About.tsx';
+import Portfolio from './components/Portfolio.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import Contact from './components/Contact.tsx';
 import { useEffect } from 'react';
@@ -33,6 +34,7 @@ function App() {
       <Hero />
       <About />
       <Services />
+      <Portfolio />
       <Testimonials />
       <Contact />
       <Footer />

@@ -74,7 +74,7 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300">
+          <div className="md:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300">
             <div className="container mx-auto px-4 py-4 space-y-3">
               {menuItems.map((item) => (
                 <a

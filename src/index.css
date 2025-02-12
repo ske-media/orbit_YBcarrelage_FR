@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Prevent Horizontal Scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;

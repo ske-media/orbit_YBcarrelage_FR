@@ -95,22 +95,25 @@ const specialization = {
 };
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-gradient-to-b from-white to-white-smoke relative">
+    <section id="services" className="py-24 bg-gradient-to-b from-white to-white-smoke relative overflow-hidden">
       {/* Background Decorative Images */}
-      <div className="absolute top-0 right-0 w-1/3 h-64 overflow-hidden opacity-10">
+      <div className="absolute top-0 right-0 w-1/3 h-64 overflow-hidden opacity-5">
         <img
-          src="https://images.unsplash.com/photo-1615971677499-5467cbab01c0"
+          src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c"
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform scale-150"
         />
       </div>
-      <div className="absolute bottom-0 left-0 w-1/4 h-48 overflow-hidden opacity-10">
+      <div className="absolute bottom-0 left-0 w-1/4 h-48 overflow-hidden opacity-5">
         <img
-          src="https://images.unsplash.com/photo-1609644124060-ac26e808b6ea"
+          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe"
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover transform scale-150"
         />
       </div>
+      {/* Decorative Gradient Overlays */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-goldenrod/5 to-transparent rounded-full transform translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-charcoal/5 to-transparent rounded-full transform -translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -127,16 +130,16 @@ const Services = () => {
             <a
               href={service.link}
               key={service.title}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-goldenrod/30 relative overflow-hidden transform hover:-translate-y-1"
+              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-charcoal/30 relative overflow-hidden transform hover:-translate-y-1"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-goldenrod/5 via-charcoal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-br from-charcoal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Icon Container */}
               <div className="mb-6 relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-goldenrod/10 to-charcoal/10 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                <div className="w-14 h-14 bg-gradient-to-br from-goldenrod/10 to-goldenrod/20 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
               <service.icon
                 size={28}
-                className="text-charcoal group-hover:text-goldenrod transition-colors duration-500"
+                className="text-goldenrod group-hover:text-charcoal transition-colors duration-500"
               />
                 </div>
               </div>
@@ -147,14 +150,18 @@ const Services = () => {
               <p className="text-base sm:text-lg text-custom-gray font-body leading-relaxed relative mb-6">
                 {service.description}
               </p>
-              
-              {/* Call to Action */}
-              <div className="flex items-center text-charcoal group-hover:text-goldenrod transition-colors duration-500">
-                <span className="font-medium mr-2">En savoir plus</span>
-                <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform duration-500" />
-              </div>
             </a>
           ))}
+        </div>
+        
+        {/* Global CTA */}
+        <div className="text-center">
+          <a
+            href="#contact"
+            className="inline-flex items-center px-8 py-4 bg-goldenrod text-white rounded-lg text-lg font-medium hover:bg-goldenrod/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          >
+            Obtenir un devis gratuit
+          </a>
         </div>
         
         {/* Specialization Section */}
@@ -162,7 +169,7 @@ const Services = () => {
           {/* Decorative Image */}
           <div className="absolute top-0 right-0 w-1/3 h-full overflow-hidden opacity-5">
             <img
-              src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb"
+              src="https://i.imgur.com/Lewcjf0.jpeg"
               alt=""
               className="w-full h-full object-cover"
             />

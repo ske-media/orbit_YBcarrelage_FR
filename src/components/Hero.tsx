@@ -35,9 +35,9 @@ const Hero = () => {
             <div className="flex justify-center md:justify-start animate-fade-up" style={{ animationDelay: '400ms' }}>
               <a
                 href="#contact"
-                className="group relative inline-flex items-center px-8 sm:px-10 py-4 sm:py-5 bg-goldenrod text-white rounded-lg text-lg sm:text-xl font-accent hover:bg-goldenrod/90 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1"
+                className="group relative inline-flex items-center px-8 sm:px-10 py-4 sm:py-5 bg-goldenrod text-white rounded-lg text-lg sm:text-xl font-heading hover:bg-goldenrod/90 transition-all duration-300 overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-1"
               >
-                <span className="relative z-10 font-bold tracking-wide">Obtenir un devis gratuit</span>
+                <span className="relative z-10 tracking-wide">Obtenir un devis gratuit</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/30 to-white/10 transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
               </a>
             </div>

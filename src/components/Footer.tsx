@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, ArrowUp } from 'lucide-react';
+import { Phone, MapPin, Instagram, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,96 +9,95 @@ const Footer = () => {
   return (
     <footer className="bg-paynes-gray relative">
       {/* Decorative Top Border */}
-      <div className="h-2 bg-gradient-to-r from-goldenrod via-charcoal to-paynes-gray" />
+      <div className="h-1 md:h-2 bg-gradient-to-r from-goldenrod via-charcoal to-paynes-gray opacity-90" />
       
-      <div className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-8">
           {/* Company Info */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <img
               src="https://i.imgur.com/vILcN94.png"
               alt="Carreau D'As"
               className="h-16 w-auto mb-6"
             />
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-300 mb-6 text-center md:text-left">
               Artisan carreleur spécialisé dans la pose de carrelage grand format et les chantiers haut de gamme.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white/80 hover:text-goldenrod transition-colors">
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-white/80 hover:text-goldenrod transition-colors">
+            <div className="inline-flex items-center bg-white/10 rounded-lg px-4 py-2 hover:bg-white/20 transition-all duration-300">
+              <a
+                href="https://www.instagram.com/ybcarrelage/?hl=fr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-goldenrod transition-colors inline-flex items-center gap-2"
+              >
                 <Instagram className="w-6 h-6" />
-              </a>
-              <a href="#" className="text-white/80 hover:text-goldenrod transition-colors">
-                <Linkedin className="w-6 h-6" />
+                <span>@ybcarrelage</span>
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-white font-semibold text-xl mb-6">Navigation</h3>
-            <ul className="space-y-4">
-              <li>
-                <a href="#services" className="text-gray-300 hover:text-goldenrod transition-colors">
-                  Services
-                </a>
+          {/* Hours */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-white font-semibold text-xl mb-6">Horaires</h3>
+            <ul className="space-y-4 text-gray-300 text-center md:text-left">
+              <li className="bg-white/5 rounded-lg px-6 py-3 w-full">
+                <span className="font-semibold">Lundi - Vendredi</span>
+                <br />
+                7h - 19h
               </li>
-              <li>
-                <a href="#portfolio" className="text-gray-300 hover:text-goldenrod transition-colors">
-                  Réalisations
-                </a>
+              <li className="bg-white/5 rounded-lg px-6 py-3 w-full">
+                <span className="font-semibold">Samedi</span>
+                <br />
+                9h - 17h
               </li>
-              <li>
-                <a href="#testimonials" className="text-gray-300 hover:text-goldenrod transition-colors">
-                  Témoignages
-                </a>
-              </li>
-              <li>
-                <a href="#contact" className="text-gray-300 hover:text-goldenrod transition-colors">
-                  Contact
-                </a>
+              <li className="bg-white/5 rounded-lg px-6 py-3 w-full">
+                <span className="font-semibold">Dimanche</span>
+                <br />
+                Fermé
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="flex flex-col items-center md:items-start">
             <h3 className="text-white font-semibold text-xl mb-6">Contact</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center text-gray-300">
+            <ul className="space-y-4 w-full">
+              <li className="flex items-center justify-center md:justify-start text-gray-300 bg-white/5 rounded-lg px-6 py-3">
                 <Phone className="w-5 h-5 mr-3 text-goldenrod" />
                 <a href="tel:+3370151468" className="hover:text-goldenrod transition-colors">
                   +33 70 15 14 68
                 </a>
               </li>
-              <li className="flex items-center text-gray-300">
-                <Mail className="w-5 h-5 mr-3 text-goldenrod" />
-                <a href="mailto:contact@carreaudas.fr" className="hover:text-goldenrod transition-colors">
-                  contact@carreaudas.fr
-                </a>
-              </li>
-              <li className="flex items-start text-gray-300">
+              <li className="flex items-start justify-center md:justify-start text-gray-300 bg-white/5 rounded-lg px-6 py-3">
                 <MapPin className="w-5 h-5 mr-3 text-goldenrod flex-shrink-0 mt-1" />
                 <span>Canton de Genève, Annemasse et alentours</span>
               </li>
             </ul>
           </div>
 
-          {/* Hours */}
-          <div>
-            <h3 className="text-white font-semibold text-xl mb-6">Horaires</h3>
-            <ul className="space-y-4 text-gray-300">
-              <li>
-                <span className="font-semibold">Lundi - Vendredi</span>
-                <br />
-                8h - 18h
+          {/* Quick Links */}
+          <div className="flex flex-col items-center md:items-start">
+            <h3 className="text-white font-semibold text-xl mb-6">Navigation</h3>
+            <ul className="space-y-4 w-full text-center md:text-left">
+              <li className="bg-white/5 rounded-lg px-6 py-3">
+                <a href="#services" className="text-gray-300 hover:text-goldenrod transition-colors block">
+                  Services
+                </a>
               </li>
-              <li>
-                <span className="font-semibold">Samedi - Dimanche</span>
-                <br />
-                Fermé
+              <li className="bg-white/5 rounded-lg px-6 py-3">
+                <a href="#portfolio" className="text-gray-300 hover:text-goldenrod transition-colors block">
+                  Réalisations
+                </a>
+              </li>
+              <li className="bg-white/5 rounded-lg px-6 py-3">
+                <a href="#testimonials" className="text-gray-300 hover:text-goldenrod transition-colors block">
+                  Témoignages
+                </a>
+              </li>
+              <li className="bg-white/5 rounded-lg px-6 py-3">
+                <a href="#contact" className="text-gray-300 hover:text-goldenrod transition-colors block">
+                  Contact
+                </a>
               </li>
             </ul>
           </div>
@@ -112,7 +111,7 @@ const Footer = () => {
             </p>
             <button
               onClick={scrollToTop}
-              className="group flex items-center space-x-2 text-gray-400 hover:text-goldenrod transition-colors"
+              className="group flex items-center gap-2 text-gray-400 hover:text-goldenrod transition-colors bg-white/10 rounded-lg px-6 py-3 hover:bg-white/20"
             >
               <span>Retour en haut</span>
               <ArrowUp className="w-4 h-4 transform group-hover:-translate-y-1 transition-transform" />

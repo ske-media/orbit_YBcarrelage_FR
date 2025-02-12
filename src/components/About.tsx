@@ -7,14 +7,14 @@ const About = () => {
       {/* Decorative Background Images */}
       <div className="absolute top-0 right-0 w-1/4 h-64 overflow-hidden opacity-10 transform rotate-12">
         <img
-          src="https://images.unsplash.com/photo-1584467541268-b040f83be3fd"
+          src="https://i.imgur.com/STfczfD.jpeg"
           alt=""
           className="w-full h-full object-cover"
         />
       </div>
       <div className="absolute bottom-0 left-0 w-1/3 h-80 overflow-hidden opacity-10 transform -rotate-12">
         <img
-          src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca"
+          src="https://i.imgur.com/xD5MxUZ.jpeg"
           alt=""
           className="w-full h-full object-cover"
         />

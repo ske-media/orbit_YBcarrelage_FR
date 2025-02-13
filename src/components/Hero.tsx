@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 text-center md:text-left font-heading leading-tight animate-fade-up">
-              Sublimez vos espaces avec un carrelage élégant et durable
+              L'excellence du carrelage au service de vos espaces
             </h1>
             <p className="text-lg sm:text-xl text-gray-200 mb-8 md:mb-10 text-center md:text-left font-body leading-relaxed animate-fade-up" style={{ animationDelay: '200ms' }}>
               Spécialisés dans la pose de carrelage grand format et les chantiers haut de gamme, nous vous accompagnons dans la conception et la réalisation de vos sols et murs avec précision et esthétisme.

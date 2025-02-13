@@ -85,11 +85,10 @@ const Testimonials = () => {
             
             <div className="relative">
               <Quote className="absolute -top-2 -left-2 w-12 h-12 text-goldenrod/20 transform -scale-x-100" />
-              <Quote className="absolute -bottom-2 -right-2 w-12 h-12 text-goldenrod/20" />
                 
               <div className="px-8 py-4 max-h-[400px] overflow-y-auto">
                 <p className="text-custom-gray text-lg md:text-xl leading-relaxed mb-8 italic text-center">
-                  "{testimonials[activeIndex].text}"
+                  {testimonials[activeIndex].text}
                 </p>
                   
                 <div className="flex flex-col items-center">

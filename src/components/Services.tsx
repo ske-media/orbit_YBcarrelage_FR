@@ -155,7 +155,7 @@ const Services = () => {
         </div>
         
         {/* Global CTA */}
-        <div className="text-center">
+        <div className="text-center mb-20">
           <a
             href="#contact"
             className="inline-flex items-center px-8 py-4 bg-goldenrod text-white rounded-lg text-lg font-medium hover:bg-goldenrod/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"

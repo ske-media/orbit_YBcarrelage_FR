@@ -125,29 +125,29 @@ const Services = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-20">
           {services.map((service) => (
             <a
               href={service.link}
               key={service.title}
-              className="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-charcoal/30 relative overflow-hidden transform hover:-translate-y-1"
+              className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-charcoal/30 relative overflow-hidden transform hover:-translate-y-1"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-charcoal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Icon Container */}
               <div className="mb-6 relative">
-                <div className="w-14 h-14 bg-gradient-to-br from-goldenrod/10 to-goldenrod/20 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 bg-gradient-to-br from-goldenrod/10 to-goldenrod/20 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
               <service.icon
-                size={28}
+                size={24}
                 className="text-goldenrod group-hover:text-charcoal transition-colors duration-500"
               />
                 </div>
               </div>
               
-              <h3 className="text-xl sm:text-2xl font-semibold mb-3 md:mb-4 text-paynes-gray font-subheading relative">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 text-paynes-gray font-subheading relative">
                 {service.title}
               </h3>
-              <p className="text-base sm:text-lg text-custom-gray font-body leading-relaxed relative mb-6">
+              <p className="text-sm sm:text-base text-custom-gray font-body leading-relaxed relative mb-4">
                 {service.description}
               </p>
             </a>

@@ -108,6 +108,15 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} Carreau D'As. Tous droits réservés.
+              <span className="mx-2">|</span>
+              <a
+                href="https://agence-orbit.ch/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-goldenrod transition-colors inline-flex items-center gap-1"
+              >
+                Développé par Steven C. K. ELDRING - Agence ORBIT
+              </a>
             </p>
             <button
               onClick={scrollToTop}

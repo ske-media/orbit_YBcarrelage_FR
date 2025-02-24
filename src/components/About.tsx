@@ -42,9 +42,9 @@ const About = () => {
                   <GraduationCap className="w-6 h-6 text-charcoal" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-paynes-gray mb-2">BP Carrelage-Mosaïque</h3>
+                  <h3 className="font-semibold text-paynes-gray mb-2">CAP Carreleur-Mosaïste</h3>
                   <p className="text-custom-gray text-sm">
-                    Approfondissement des compétences techniques, gestion de chantier et conseil client
+                    Formation de base en pose de carrelage et mosaïque, maîtrise des techniques et des matériaux
                   </p>
                 </div>
               </div>

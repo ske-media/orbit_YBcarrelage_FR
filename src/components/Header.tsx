@@ -42,12 +42,12 @@ const Header = () => {
     }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center">
+          <div className="flex items-center -my-4">
             <a href="#home" className="block">
               <img
                 src="https://i.imgur.com/RmvgGXO.png"
                 alt="YB Carrelage"
-                className="h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-105"
+                className="h-16 lg:h-20 w-auto transition-transform duration-300 hover:scale-105"
               />
             </a>
           </div>

@@ -89,29 +89,21 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <nav className={`lg:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300 ${
-          isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        <nav className={`lg:hidden fixed left-0 right-0 top-[88px] backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300 ${
+          isMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
         }`}>
             <div className="container mx-auto px-4 py-4 space-y-3">
               {menuItems.map((item) => (
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-goldenrod/20 rounded-lg transition-all duration-300 hover:pl-6 relative overflow-hidden group"
+                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-goldenrod/20 rounded-lg transition-all duration-300 relative overflow-hidden group"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="relative z-10">{item.label}</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-goldenrod/20 to-transparent transform -skew-x-12 -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-goldenrod/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               ))}
-              <a
-                href="tel:+33770151468"
-                className="flex items-center px-4 py-3 text-goldenrod hover:text-white bg-goldenrod/20 hover:bg-goldenrod rounded-lg transition-all duration-300 group"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Phone size={18} className="mr-2" />
-                <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
-              </a>
             </div>
         </nav>
       </div>

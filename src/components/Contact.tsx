@@ -90,7 +90,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-goldenrod to-goldenrod/90 text-white py-4 rounded-lg hover:from-goldenrod/90 hover:to-goldenrod transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+                  className="w-full bg-gradient-to-r from-goldenrod to-goldenrod/90 text-white py-3 sm:py-4 rounded-lg hover:from-goldenrod/90 hover:to-goldenrod transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 text-base sm:text-lg"
                 >
                   Envoyer le message
                 </button>

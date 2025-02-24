@@ -5,14 +5,27 @@ import { useState, useEffect } from 'react';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth < 1024);
+      if (window.innerWidth >= 1024) {
+        setIsMenuOpen(false);
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const menuItems = [
@@ -27,18 +40,18 @@ const Header = () => {
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled ? 'bg-black/80 backdrop-blur-md py-2' : 'bg-transparent py-4'
     }`}>
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <img
               src="https://i.imgur.com/vILcN94.png"
               alt="Carreau D'As"
-              className="h-14 w-auto transition-transform duration-300 hover:scale-105"
+              className="h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-105"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-10">
+          <nav className="hidden lg:flex space-x-10">
             {menuItems.map((item) => (
               <a
                 key={item.label}
@@ -53,7 +66,7 @@ const Header = () => {
 
           {/* Mobile Navigation Button */}
           <button
-            className="md:hidden p-2 text-white/90 hover:text-white transition-colors duration-300"
+            className="lg:hidden p-2 text-white/90 hover:text-white transition-colors duration-300"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -63,7 +76,7 @@ const Header = () => {
           {/* Contact Button */}
           <a
             href="tel:+33770151468"
-            className="hidden md:flex items-center px-6 py-3 bg-goldenrod/90 backdrop-blur-sm text-white rounded-lg hover:bg-goldenrod transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
+            className="hidden lg:flex items-center px-6 py-3 bg-goldenrod/90 backdrop-blur-sm text-white rounded-lg hover:bg-goldenrod transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
           >
             <Phone size={18} className="mr-2" />
             <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
@@ -71,8 +84,9 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300">
+        <div className={`lg:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300 ${
+          isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
+        }`}>
             <div className="container mx-auto px-4 py-4 space-y-3">
               {menuItems.map((item) => (
                 <a
@@ -94,8 +108,7 @@ const Header = () => {
                 <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
               </a>
             </div>
-          </div>
-        )}
+        </div>
       </div>
     </header>
   );

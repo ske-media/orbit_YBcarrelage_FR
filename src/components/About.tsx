@@ -4,21 +4,6 @@ import { Medal, GraduationCap, Briefcase } from 'lucide-react';
 const About = () => {
   return (
     <section className="relative py-20 overflow-hidden">
-      {/* Decorative Background Images */}
-      <div className="absolute top-0 right-0 w-1/4 h-64 overflow-hidden opacity-10 transform rotate-12">
-        <img
-          src="https://i.imgur.com/STfczfD.jpeg"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
-      <div className="absolute bottom-0 left-0 w-1/3 h-80 overflow-hidden opacity-10 transform -rotate-12">
-        <img
-          src="https://i.imgur.com/xD5MxUZ.jpeg"
-          alt=""
-          className="w-full h-full object-cover"
-        />
-      </div>
       
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

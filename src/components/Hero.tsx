@@ -40,7 +40,7 @@ const Hero = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative h-full flex items-end pb-24">
+      <div className="relative h-full flex items-center pt-64">
         <div className="container mx-auto px-4">
           <div className="w-full flex justify-center">
             <div className="flex justify-center animate-fade-up" style={{ animationDelay: '400ms' }}>

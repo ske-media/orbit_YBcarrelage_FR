@@ -96,21 +96,6 @@ const specialization = {
 const Services = () => {
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-white to-white-smoke relative overflow-hidden">
-      {/* Background Decorative Images */}
-      <div className="absolute top-0 right-0 w-1/3 h-64 overflow-hidden opacity-5">
-        <img
-          src="https://images.unsplash.com/photo-1604147706283-d7119b5b822c"
-          alt=""
-          className="w-full h-full object-cover transform scale-150"
-        />
-      </div>
-      <div className="absolute bottom-0 left-0 w-1/4 h-48 overflow-hidden opacity-5">
-        <img
-          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe"
-          alt=""
-          className="w-full h-full object-cover transform scale-150"
-        />
-      </div>
       {/* Decorative Gradient Overlays */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-goldenrod/5 to-transparent rounded-full transform translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-charcoal/5 to-transparent rounded-full transform -translate-x-1/2 translate-y-1/2" />
@@ -166,14 +151,6 @@ const Services = () => {
         
         {/* Specialization Section */}
         <div className="bg-white rounded-xl shadow-xl p-8 sm:p-10 border border-khaki/20 relative overflow-hidden">
-          {/* Decorative Image */}
-          <div className="absolute top-0 right-0 w-1/3 h-full overflow-hidden opacity-5">
-            <img
-              src="https://i.imgur.com/Lewcjf0.jpeg"
-              alt=""
-              className="w-full h-full object-cover"
-            />
-          </div>
           <div className="absolute top-0 right-0 w-64 h-64 bg-charcoal/5 rounded-full transform translate-x-32 -translate-y-32" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-goldenrod/5 rounded-full transform -translate-x-24 translate-y-24" />
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-paynes-gray font-heading flex items-center relative">

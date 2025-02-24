@@ -50,7 +50,6 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-20 bg-white relative overflow-hidden">
       {/* Decorative Background */}
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/concrete-wall.png')] opacity-5" />
       
       <div className="container mx-auto px-4 relative">
         <div className="text-center mb-16 animate-fade-up">

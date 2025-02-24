@@ -65,25 +65,25 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 lg:-translate-x-24 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-goldenrod hover:text-white transition-all duration-300 group hidden md:block"
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 lg:-translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group hidden md:block"
             aria-label="Témoignage précédent"
           >
             <ChevronLeft className="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 lg:translate-x-24 z-10 p-3 rounded-full bg-white shadow-lg hover:bg-goldenrod hover:text-white transition-all duration-300 group hidden md:block"
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 lg:translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group hidden md:block"
             aria-label="Témoignage suivant"
           >
             <ChevronRight className="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Testimonial Card */}
-          <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 md:p-12 shadow-xl relative overflow-hidden transform transition-all duration-500 border border-khaki/20 hover:border-charcoal/30">
-            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-goldenrod via-charcoal to-paynes-gray" />
+          <div className="bg-gradient-to-br from-white to-gray-50 p-8 md:p-12 shadow-xl relative overflow-hidden transform transition-all duration-500 border border-khaki/20 hover:border-charcoal/30">
+            <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-premium-base via-charcoal to-paynes-gray" />
             
             <div className="relative">
-              <Quote className="absolute -top-2 -left-2 w-12 h-12 text-goldenrod/20 transform -scale-x-100" />
+              <Quote className="absolute -top-2 -left-2 w-12 h-12 text-premium-base/20 transform -scale-x-100" />
                 
               <div className="px-8 py-4 max-h-[400px] overflow-y-auto">
                 <p className="text-custom-gray text-lg md:text-xl leading-relaxed mb-8 italic text-center">
@@ -98,7 +98,7 @@ const Testimonials = () => {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className="w-5 h-5 text-goldenrod fill-current"
+                        className="w-5 h-5 text-premium-base fill-current"
                       />
                     ))}
                   </div>
@@ -115,8 +115,8 @@ const Testimonials = () => {
                 onClick={() => setActiveIndex(index)}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${
                   index === activeIndex
-                    ? 'bg-goldenrod w-6'
-                    : 'bg-gray-300 hover:bg-goldenrod/50'
+                    ? 'bg-premium-base w-6'
+                    : 'bg-gray-300 hover:bg-premium-base/50'
                 }`}
                 aria-label={`Voir témoignage ${index + 1}`}
               />

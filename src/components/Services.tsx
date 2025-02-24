@@ -97,15 +97,15 @@ const Services = () => {
   return (
     <section id="services" className="py-24 bg-gradient-to-b from-white to-white-smoke relative overflow-hidden">
       {/* Decorative Gradient Overlays */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-goldenrod/5 to-transparent rounded-full transform translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-premium-base/5 to-transparent rounded-full transform translate-x-1/2 -translate-y-1/2" />
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-charcoal/5 to-transparent rounded-full transform -translate-x-1/2 translate-y-1/2" />
 
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold mb-6 font-heading bg-gradient-to-r from-paynes-gray to-charcoal bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 font-heading bg-gradient-to-r from-paynes-gray to-charcoal bg-clip-text text-transparent leading-[1.2]">
             Nos Services
           </h2>
-          <p className="text-lg text-custom-gray leading-relaxed">
+          <p className="text-lg text-custom-gray leading-relaxed font-light">
             Des solutions sur mesure pour tous vos projets de carrelage, du sol au mur, de l'intérieur à l'extérieur.
           </p>
         </div>
@@ -115,16 +115,16 @@ const Services = () => {
             <a
               href={service.link}
               key={service.title}
-              className="group bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-charcoal/30 relative overflow-hidden transform hover:-translate-y-1"
+              className="group bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-khaki/10 hover:border-charcoal/30 relative overflow-hidden transform hover:-translate-y-1"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-charcoal/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               {/* Icon Container */}
               <div className="mb-6 relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-goldenrod/10 to-goldenrod/20 rounded-xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 premium-gradient flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
               <service.icon
                 size={24}
-                className="text-goldenrod group-hover:text-charcoal transition-colors duration-500"
+                className="text-white group-hover:text-white/90 transition-colors duration-500"
               />
                 </div>
               </div>
@@ -143,7 +143,7 @@ const Services = () => {
         <div className="text-center mb-20">
           <a
             href="#contact"
-            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-goldenrod text-white rounded-lg text-base sm:text-lg font-medium hover:bg-goldenrod/90 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-full sm:w-auto justify-center mx-4 sm:mx-0"
+            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 premium-gradient text-white text-base sm:text-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-full sm:w-auto justify-center mx-4 sm:mx-0"
           >
             <span className="sm:hidden">Obtenir un devis</span>
             <span className="hidden sm:inline">Obtenir un devis gratuit</span>
@@ -151,7 +151,7 @@ const Services = () => {
         </div>
         
         {/* Specialization Section */}
-        <div className="bg-white rounded-xl shadow-xl p-8 sm:p-10 border border-khaki/20 relative overflow-hidden">
+        <div className="bg-white shadow-xl p-8 sm:p-10 border border-khaki/20 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-charcoal/5 rounded-full transform translate-x-32 -translate-y-32" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-goldenrod/5 rounded-full transform -translate-x-24 translate-y-24" />
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 text-paynes-gray font-heading flex items-center relative">

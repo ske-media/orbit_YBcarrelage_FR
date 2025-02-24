@@ -15,23 +15,30 @@ html {
 
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f5;
+  background: #1A1A1A;
+  border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D4A017;
-  border-radius: 5px;
+  background: #C5A572;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b38614;
+  background: #9F8555;
 }
 
 @layer base {
+  ::selection {
+    background-color: #C5A572;
+    color: white;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
@@ -46,11 +53,59 @@ html {
 
   /* Animation Classes */
   .animate-fade-up {
-    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+    @apply opacity-0 translate-y-10 transition-all duration-1000 ease-out;
   }
 
   .animate-fade-up.in-view {
     @apply opacity-100 translate-y-0;
+  }
+
+  .animate-scale {
+    @apply transition-transform duration-700 ease-out hover:scale-105;
+  }
+
+  .premium-shadow {
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+  }
+
+  .premium-gradient {
+    background: linear-gradient(135deg, #D4B683 0%, #C5A572 50%, #9F8555 100%),
+                linear-gradient(45deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+  }
+  
+  .glass-effect {
+    backdrop-filter: blur(16px);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #2C3E50 0%, #34495E 100%),
+                linear-gradient(45deg, rgba(197, 165, 114, 0.3) 0%, rgba(197, 165, 114, 0) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hover-lift {
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.3);
+    border-color: rgba(197, 165, 114, 0.3);
+  }
+
+  .premium-input {
+    @apply border-2 bg-white/80 transition-all duration-700;
+  }
+
+  .premium-input:focus {
+    @apply border-premium-base/50 ring-2 ring-premium-base/20 bg-white;
+    box-shadow: 0 10px 30px -10px rgba(197, 165, 114, 0.2);
   }
 
   @keyframes scroll {

@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import BeforeAfter from './components/BeforeAfter';
+import CustomCreations from './components/CustomCreations';
 import About from './components/About.tsx';
 import Portfolio from './components/Portfolio.tsx';
 import Partners from './components/Partners.tsx';
@@ -36,6 +37,7 @@ function App() {
       <Hero />
       <About />
       <BeforeAfter />
+      <CustomCreations />
       <Services />
       <Portfolio />
       <Partners />

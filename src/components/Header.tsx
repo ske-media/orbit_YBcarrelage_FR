@@ -45,8 +45,8 @@ const Header = () => {
           <div className="flex items-center">
             <a href="#home" className="block">
               <img
-                src="https://i.imgur.com/vILcN94.png"
-                alt="Carreau D'As"
+                src="https://i.imgur.com/RmvgGXO.png"
+                alt="YB Carrelage"
                 className="h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-105"
               />
             </a>
@@ -61,7 +61,7 @@ const Header = () => {
                 className="text-white/90 hover:text-white transition-all duration-300 relative overflow-hidden group"
               >
                 <span className="relative z-10">{item.label}</span>
-                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-goldenrod transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
+                <span className="absolute inset-x-0 bottom-0 h-0.5 bg-premium-base transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100" />
               </a>
             ))}
           </nav>
@@ -81,7 +81,7 @@ const Header = () => {
           {/* Contact Button */}
           <a
             href="tel:+33770151468"
-            className="hidden lg:flex items-center px-6 py-3 bg-goldenrod/90 backdrop-blur-sm text-white rounded-lg hover:bg-goldenrod transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
+            className="hidden lg:flex items-center px-6 py-3 premium-gradient backdrop-blur-sm text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
           >
             <Phone size={18} className="mr-2" />
             <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
@@ -97,11 +97,11 @@ const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-goldenrod/20 rounded-lg transition-all duration-300 relative overflow-hidden group"
+                  className="block px-4 py-3 text-white/90 hover:text-white hover:bg-premium-base/20 transition-all duration-300 relative overflow-hidden group"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <span className="relative z-10">{item.label}</span>
-                  <span className="absolute inset-0 bg-gradient-to-r from-goldenrod/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-premium-base/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </a>
               ))}
             </div>

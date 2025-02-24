@@ -43,11 +43,13 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <img
-              src="https://i.imgur.com/vILcN94.png"
-              alt="Carreau D'As"
-              className="h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-105"
-            />
+            <a href="#home" className="block">
+              <img
+                src="https://i.imgur.com/vILcN94.png"
+                alt="Carreau D'As"
+                className="h-12 lg:h-14 w-auto transition-transform duration-300 hover:scale-105"
+              />
+            </a>
           </div>
 
           {/* Desktop Navigation */}

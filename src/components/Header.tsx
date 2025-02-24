@@ -69,7 +69,10 @@ const Header = () => {
           {/* Mobile Navigation Button */}
           <button
             className="lg:hidden p-2 text-white/90 hover:text-white transition-colors duration-300"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={(e) => {
+              e.preventDefault();
+              setIsMenuOpen(!isMenuOpen);
+            }}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -86,7 +89,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300 ${
+        <nav className={`lg:hidden fixed left-0 right-0 mt-2 backdrop-blur-md bg-black/80 border-t border-white/10 transform transition-all duration-300 ${
           isMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
         }`}>
             <div className="container mx-auto px-4 py-4 space-y-3">
@@ -110,7 +113,7 @@ const Header = () => {
                 <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
               </a>
             </div>
-        </div>
+        </nav>
       </div>
     </header>
   );

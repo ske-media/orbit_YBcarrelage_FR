@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const transformations = [
   {
-    title: "Rénovation salle de bain",
+    title: "Transformation #1 : Rénovation complète d'une salle de bain",
     before: "https://i.imgur.com/r7KvBMe.jpeg",
     after: "https://i.imgur.com/Rn6EDTy.jpeg",
   },
   {
-    title: "Transformation complète",
+    title: "Transformation #2 : Rénovation d'un espace de vie",
     before: "https://i.imgur.com/dvUpkfP.jpeg",
     after: "https://i.imgur.com/RPBXBLK.jpeg",
   }
@@ -112,10 +112,13 @@ const BeforeAfter = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-paynes-gray font-heading">
-            Nos Transformations
+            Avant / Après
           </h2>
           <p className="text-custom-gray max-w-2xl mx-auto">
-            Découvrez l'impact de notre expertise à travers ces transformations spectaculaires.
+            Faites glisser le curseur pour découvrir nos transformations spectaculaires.
+            <span className="block mt-2 text-sm text-premium-base">
+              Utilisez les flèches pour naviguer entre les différentes transformations
+            </span>
           </p>
         </div>
 
@@ -198,14 +201,22 @@ const BeforeAfter = () => {
 
             {/* Title */}
             <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 select-none">
-              <h3 className="text-white text-xl font-semibold text-center">
+              <h3 className="text-white text-xl font-semibold text-center mb-2">
                 {transformations[activeIndex].title}
               </h3>
+              <div className="flex justify-center gap-2">
+                <span className="text-white/80 text-sm bg-black/30 px-3 py-1 rounded-full">
+                  Glissez pour comparer
+                </span>
+              </div>
             </div>
           </div>
 
           {/* Pagination Dots */}
-          <div className="flex justify-center gap-3 mt-8">
+          <div className="flex flex-col items-center gap-4 mt-8">
+            <p className="text-custom-gray font-medium">
+              {activeIndex + 1} / {transformations.length}
+            </p>
             {transformations.map((_, index) => (
               <button
                 key={index}

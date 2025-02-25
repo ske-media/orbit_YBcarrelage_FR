@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const projects = [
   {
@@ -58,6 +58,7 @@ const Portfolio = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const showNext = () => {
     if (!isAnimating) {
@@ -115,6 +116,29 @@ const Portfolio = () => {
     setTouchStart(0);
   };
 
+  const handleImageClick = (image: string) => {
+    if (window.innerWidth >= 1024) {
+      setSelectedImage(image);
+      document.body.style.overflow = 'hidden';
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = '';
+  };
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    };
+
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
+
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-white to-khaki/10 relative overflow-hidden select-none">
       {/* Decorative Elements */}
@@ -161,8 +185,10 @@ const Portfolio = () => {
                   key={index}
                   className="w-full sm:w-1/2 lg:w-1/3 flex-shrink-0"
                 >
-                  {/* Project Card */}
-                  <div className="group relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3]">
+                  <div 
+                    className="group relative overflow-hidden rounded-2xl shadow-xl aspect-[4/3] cursor-pointer"
+                    onClick={() => handleImageClick(project.image)}
+                  >
                     <img
                       src={project.image}
                       alt={project.title}
@@ -200,6 +226,27 @@ const Portfolio = () => {
             ))}
           </div>
         </div>
+
+        {/* Fullscreen Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+            onClick={closeModal}
+          >
+            <button
+              className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors"
+              onClick={closeModal}
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <img
+              src={selectedImage}
+              alt="Vue agrandie"
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </div>
     </section>
   );

@@ -140,10 +140,10 @@ const Services = () => {
         </div>
         
         {/* Global CTA */}
-        <div className="text-center mb-20">
+        <div className="flex justify-center mb-20">
           <a
             href="#contact"
-            className="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 premium-gradient text-white text-base sm:text-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-full sm:w-auto justify-center mx-4 sm:mx-0"
+            className="flex items-center px-6 sm:px-8 py-3 sm:py-4 premium-gradient text-white text-base sm:text-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1 w-[calc(100%-2rem)] sm:w-auto justify-center"
           >
             <span className="sm:hidden">Obtenir un devis</span>
             <span className="hidden sm:inline">Obtenir un devis gratuit</span>

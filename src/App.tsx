@@ -36,11 +36,11 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <Partners />
       <BeforeAfter />
-      <CustomCreations />
       <Services />
+      <CustomCreations />
       <Portfolio />
+      <Partners />
       <Testimonials />
       <Contact />
       <Footer />

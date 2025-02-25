@@ -33,20 +33,19 @@ const Hero = () => {
             <p className="text-lg sm:text-xl text-gray-200/90 mb-8 md:mb-10 text-center md:text-left font-body leading-relaxed animate-fade-up tracking-wide drop-shadow-lg font-light" style={{ animationDelay: '200ms' }}>
               Spécialisés dans la pose de carrelage grand format et les chantiers haut de gamme, nous vous accompagnons dans la conception et la réalisation de vos sols et murs avec précision et esthétisme.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 justify-center md:justify-start animate-fade-up" style={{ animationDelay: '400ms' }}>
+            <div className="flex justify-center md:justify-start animate-fade-up" style={{ animationDelay: '400ms' }}>
               <a
                 href="#contact"
-                className="group relative inline-flex items-center justify-center px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 premium-gradient text-white text-base sm:text-lg md:text-xl font-heading transition-all duration-700 overflow-hidden hover-lift sm:mr-4 backdrop-blur-sm shadow-lg hover:shadow-2xl"
+                className="hidden sm:inline-flex group relative items-center justify-center px-8 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 premium-gradient text-white text-base sm:text-lg md:text-xl font-heading transition-all duration-700 overflow-hidden hover-lift sm:mr-4 backdrop-blur-sm shadow-lg hover:shadow-2xl"
               >
                 <span className="relative z-10 tracking-wider">
-                  <span className="sm:hidden">Obtenir un devis</span>
-                  <span className="hidden sm:inline">Obtenir un devis gratuit</span>
+                  Obtenir un devis gratuit
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out" />
               </a>
               <a
                 href="tel:+33770151468"
-                className="lg:hidden group relative inline-flex items-center justify-center px-8 sm:px-10 py-4 sm:py-5 glass-effect text-white text-base sm:text-lg font-heading hover:bg-white/20 transition-all duration-700 overflow-hidden hover-lift sm:ml-4 shadow-lg hover:shadow-2xl"
+                className="lg:hidden group relative inline-flex items-center justify-center px-8 py-4 premium-gradient text-white text-base font-heading transition-all duration-700 overflow-hidden hover-lift shadow-lg hover:shadow-2xl"
               >
                 <Phone size={24} className="mr-2" />
                 <span className="relative z-10 tracking-wider">Appeler</span>

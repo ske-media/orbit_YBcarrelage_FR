@@ -11,7 +11,7 @@ const About = () => {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden">
               <img
-                src="https://i.imgur.com/b4ToPS1.jpeg"
+                src="https://i.imgur.com/35ZDyU1.jpeg"
                 alt="Yanis Boughlam"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />

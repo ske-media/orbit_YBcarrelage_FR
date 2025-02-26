@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="relative h-full flex items-center">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 text-center md:text-left font-heading leading-[1.1] animate-fade-up tracking-normal drop-shadow-2xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white mb-6 md:mb-8 text-center md:text-left font-heading leading-[1.1] animate-fade-up tracking-normal drop-shadow-2xl">
               L'excellence du carrelage au service de vos espaces
             </h1>
             <p className="text-lg sm:text-xl text-gray-200/90 mb-8 md:mb-10 text-center md:text-left font-body leading-relaxed animate-fade-up tracking-wide drop-shadow-lg font-light" style={{ animationDelay: '200ms' }}>

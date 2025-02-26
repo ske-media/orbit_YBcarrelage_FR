@@ -116,9 +116,6 @@ const BeforeAfter = () => {
           </h2>
           <p className="text-custom-gray max-w-2xl mx-auto">
             Faites glisser le curseur pour découvrir nos transformations spectaculaires.
-            <span className="block mt-2 text-sm text-premium-base">
-              Utilisez les flèches pour naviguer entre les différentes transformations
-            </span>
           </p>
         </div>
 
@@ -127,14 +124,14 @@ const BeforeAfter = () => {
             {/* Navigation Buttons */}
             <button
               onClick={prevTransformation}
-              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/90 shadow-lg hover:bg-goldenrod hover:text-white transition-all duration-300 group-hover:opacity-100 opacity-0 backdrop-blur-sm"
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-premium-base text-premium-base hover:text-white transition-all duration-300 group-hover:opacity-100 opacity-0 backdrop-blur-sm"
               aria-label="Transformation précédente"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={nextTransformation}
-              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/90 shadow-lg hover:bg-goldenrod hover:text-white transition-all duration-300 group-hover:opacity-100 opacity-0 backdrop-blur-sm"
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white shadow-lg hover:bg-premium-base text-premium-base hover:text-white transition-all duration-300 group-hover:opacity-100 opacity-0 backdrop-blur-sm"
               aria-label="Transformation suivante"
             >
               <ChevronRight className="w-6 h-6" />
@@ -178,7 +175,7 @@ const BeforeAfter = () => {
                 style={{ left: `${sliderPosition}%` }}
               >
                 <div className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center">
-                  <div className="w-6 h-6 rounded-full bg-goldenrod transform transition-transform group-hover:scale-110" />
+                  <div className="w-6 h-6 rounded-full bg-premium-base transform transition-transform group-hover:scale-110" />
                 </div>
               </div>
 
@@ -204,33 +201,33 @@ const BeforeAfter = () => {
               <h3 className="text-white text-xl font-semibold text-center mb-2">
                 {transformations[activeIndex].title}
               </h3>
-              <div className="flex justify-center gap-2">
-                <span className="text-white/80 text-sm bg-black/30 px-3 py-1 rounded-full">
-                  Glissez pour comparer
-                </span>
-              </div>
             </div>
           </div>
 
-          {/* Pagination Dots */}
-          <div className="flex flex-col items-center gap-4 mt-8">
-            <p className="text-custom-gray font-medium">
-              {activeIndex + 1} / {transformations.length}
-            </p>
+          {/* Pagination Indicators */}
+          <div className="flex justify-center items-center mt-8 gap-4">
             {transformations.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  setActiveIndex(index);
-                  setSliderPosition(50);
-                }}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === activeIndex
-                    ? 'bg-goldenrod w-6'
-                    : 'bg-gray-300 hover:bg-goldenrod/50'
-                }`}
-                aria-label={`Voir transformation ${index + 1}`}
-              />
+              <div key={index} className="flex items-center">
+                <button
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setSliderPosition(50);
+                  }}
+                  className={`relative transition-all duration-300 ${
+                    index === activeIndex
+                      ? 'w-4 h-4 bg-premium-base rounded-full'
+                      : 'w-12 h-1 bg-premium-base/20 hover:bg-premium-base/40'
+                  }`}
+                  aria-label={`Voir transformation ${index + 1}`}
+                >
+                  {index === activeIndex && (
+                    <span className="absolute inset-0 bg-premium-base rounded-full animate-ping opacity-75" />
+                  )}
+                </button>
+                {index < transformations.length - 1 && (
+                  <div className="w-8 h-0.5 bg-premium-base/20 mx-2" />
+                )}
+              </div>
             ))}
           </div>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Services from './components/Services';
 import BeforeAfter from './components/BeforeAfter';
+import Services from './components/Services';
 import CustomCreations from './components/CustomCreations';
 import About from './components/About.tsx';
 import Portfolio from './components/Portfolio.tsx';
@@ -36,10 +36,10 @@ function App() {
       <Header />
       <Hero />
       <About />
-      <BeforeAfter />
+      <Portfolio />
       <Services />
       <CustomCreations />
-      <Portfolio />
+      <BeforeAfter />
       <Partners />
       <Testimonials />
       <Contact />

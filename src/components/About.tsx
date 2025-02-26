@@ -24,27 +24,28 @@ const About = () => {
           {/* Content Column */}
           <div className="lg:pl-8">
             <h2 className="text-3xl sm:text-4xl font-bold text-paynes-gray mb-6 font-heading">
-              Boughlam Yanis
+              YB Carrelage
               <span className="block text-xl sm:text-2xl text-goldenrod mt-2">
-                Fondateur de YB Carrelage
+                L'excellence artisanale depuis 2023
               </span>
             </h2>
             
             <p className="text-custom-gray mb-8 leading-relaxed">
-              Artisan carreleur diplômé, passionné par son métier et attaché à l'excellence 
-              du savoir-faire traditionnel. Spécialisé dans la pose de carrelage grand format, 
-              haut de gamme, marbre et pierres naturelles.
+              Entreprise artisanale spécialisée dans la pose de carrelage haut de gamme, 
+              nous nous distinguons par notre expertise technique et notre engagement pour 
+              l'excellence. Notre savoir-faire unique en pose de carrelage grand format, 
+              marbre et pierres naturelles nous permet de réaliser vos projets les plus ambitieux.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 bg-charcoal/10 flex items-center justify-center">
-                  <GraduationCap className="w-6 h-6 text-charcoal" />
+                  <Medal className="w-6 h-6 text-charcoal" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-paynes-gray mb-2">CAP Carreleur-Mosaïste</h3>
+                  <h3 className="font-semibold text-paynes-gray mb-2">Expertise Technique</h3>
                   <p className="text-custom-gray text-sm">
-                    Formation de base en pose de carrelage et mosaïque, maîtrise des techniques et des matériaux
+                    Maîtrise des techniques avancées de pose et des dernières innovations en matière de carrelage
                   </p>
                 </div>
               </div>
@@ -54,9 +55,9 @@ const About = () => {
                   <Briefcase className="w-6 h-6 text-paynes-gray" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-paynes-gray mb-2">Création de YB Carrelage</h3>
+                  <h3 className="font-semibold text-paynes-gray mb-2">Service Premium</h3>
                   <p className="text-custom-gray text-sm">
-                    Fondée en janvier 2023, intervient dans le canton de Genève, à Annemasse et ses alentours
+                    Accompagnement personnalisé et finitions irréprochables pour des réalisations haut de gamme
                   </p>
                 </div>
               </div>

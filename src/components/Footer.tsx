@@ -64,9 +64,20 @@ const Footer = () => {
             <ul className="space-y-4 w-full">
               <li className="flex items-center justify-center md:justify-start text-gray-300 bg-white/5 px-6 py-3">
                 <Phone className="w-5 h-5 mr-3 text-premium-base" />
-                <a href="tel:+33770151468" className="hover:text-premium-base transition-colors">
-                  +33 7 70 15 14 68
-                </a>
+                <div className="flex flex-col">
+                  <div>
+                    <span className="text-sm text-gray-400">Suisse :</span>
+                    <a href="tel:+41765480001" className="block hover:text-premium-base transition-colors">
+                      +41 76 548 00 01
+                    </a>
+                  </div>
+                  <div>
+                    <span className="text-sm text-gray-400">France :</span>
+                    <a href="tel:+33770151468" className="block hover:text-premium-base transition-colors">
+                      +33 7 70 15 14 68
+                    </a>
+                  </div>
+                </div>
               </li>
               <li className="flex items-start justify-center md:justify-start text-gray-300 bg-white/5 px-6 py-3">
                 <MapPin className="w-5 h-5 mr-3 text-premium-base flex-shrink-0 mt-1" />

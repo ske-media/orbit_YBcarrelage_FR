@@ -3,12 +3,12 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const transformations = [
   {
-    title: "Transformation #1 : Rénovation complète d'une salle de bain",
+    title: "Transformation 1",
     before: "https://i.imgur.com/r7KvBMe.jpeg",
     after: "https://i.imgur.com/Rn6EDTy.jpeg",
   },
   {
-    title: "Transformation #2 : Rénovation d'un espace de vie",
+    title: "Transformation 2",
     before: "https://i.imgur.com/dvUpkfP.jpeg",
     after: "https://i.imgur.com/RPBXBLK.jpeg",
   }

@@ -44,7 +44,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out" />
               </a>
               <a
-                href="tel:+33770151468"
+                href="tel:+41765480001"
                 className="lg:hidden group relative inline-flex items-center justify-center px-8 py-4 premium-gradient text-white text-base font-heading transition-all duration-700 overflow-hidden hover-lift shadow-lg hover:shadow-2xl"
               >
                 <Phone size={24} className="mr-2" />

@@ -26,15 +26,16 @@ const About = () => {
             <h2 className="text-3xl sm:text-4xl font-bold text-paynes-gray mb-6 font-heading">
               YB Carrelage
               <span className="block text-xl sm:text-2xl text-goldenrod mt-2">
-                L'excellence artisanale depuis 2023
+                L'Excellence du Carrelage Haut de Gamme
               </span>
             </h2>
             
+            <p className="text-custom-gray mb-6 leading-relaxed">
+              YB Carrelage met son savoir-faire au service de vos projets pour des réalisations sur mesure et haut de gamme. Spécialisée dans la pose de carrelage grand format, de marbre et de pierres naturelles, l'entreprise garantit un travail d'une précision irréprochable, avec des finitions soignées et un souci du détail à chaque étape.
+            </p>
+            
             <p className="text-custom-gray mb-8 leading-relaxed">
-              Entreprise artisanale spécialisée dans la pose de carrelage haut de gamme, 
-              nous nous distinguons par notre expertise technique et notre engagement pour 
-              l'excellence. Notre savoir-faire unique en pose de carrelage grand format, 
-              marbre et pierres naturelles nous permet de réaliser vos projets les plus ambitieux.
+              Que ce soit pour des intérieurs élégants ou des espaces extérieurs raffinés, YB Carrelage transforme chaque projet en un véritable atout esthétique et durable. L'entreprise intervient dans tout le Grand Genève, notamment à Genève, Annemasse et ses environs.
             </p>
 
             <div className="space-y-6">
@@ -43,9 +44,9 @@ const About = () => {
                   <Medal className="w-6 h-6 text-charcoal" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-paynes-gray mb-2">Expertise Technique</h3>
+                  <h3 className="font-semibold text-paynes-gray mb-2">Excellence & Précision</h3>
                   <p className="text-custom-gray text-sm">
-                    Maîtrise des techniques avancées de pose et des dernières innovations en matière de carrelage
+                    Un travail d'une précision irréprochable avec des finitions soignées
                   </p>
                 </div>
               </div>
@@ -55,9 +56,9 @@ const About = () => {
                   <Briefcase className="w-6 h-6 text-paynes-gray" />
                 </div>
                 <div className="ml-4">
-                  <h3 className="font-semibold text-paynes-gray mb-2">Service Premium</h3>
+                  <h3 className="font-semibold text-paynes-gray mb-2">Service Sur Mesure</h3>
                   <p className="text-custom-gray text-sm">
-                    Accompagnement personnalisé et finitions irréprochables pour des réalisations haut de gamme
+                    Des réalisations personnalisées pour des espaces intérieurs et extérieurs raffinés
                   </p>
                 </div>
               </div>

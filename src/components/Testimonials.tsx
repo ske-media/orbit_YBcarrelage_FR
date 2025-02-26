@@ -65,21 +65,21 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 lg:-translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group hidden md:block"
+            className="absolute left-0 top-1/2 -translate-y-1/2 md:-translate-x-12 lg:-translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group"
             aria-label="Témoignage précédent"
           >
             <ChevronLeft className="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" />
           </button>
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 lg:translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group hidden md:block"
+            className="absolute right-0 top-1/2 -translate-y-1/2 md:translate-x-12 lg:translate-x-24 z-10 p-3 bg-white shadow-lg hover:bg-premium-base hover:text-white transition-all duration-300 group"
             aria-label="Témoignage suivant"
           >
             <ChevronRight className="w-6 h-6 transform group-hover:scale-110 transition-transform duration-300" />
           </button>
 
           {/* Testimonial Card */}
-          <div className="bg-gradient-to-br from-white to-gray-50 p-8 md:p-12 shadow-xl relative overflow-hidden transform transition-all duration-500 border border-khaki/20 hover:border-charcoal/30">
+          <div className="bg-gradient-to-br from-white to-gray-50 p-8 md:p-12 shadow-xl relative overflow-hidden transform transition-all duration-500 border border-khaki/20 hover:border-charcoal/30 mx-12 md:mx-0">
             <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-premium-base via-charcoal to-paynes-gray" />
             
             <div className="relative">

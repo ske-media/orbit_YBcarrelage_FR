@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 
 const images = [
   {
@@ -7,7 +7,7 @@ const images = [
     alt: 'Création personnalisée - Design moderne'
   },
   {
-    url: 'https://i.imgur.com/ViAABfJ.jpeg',
+    url: 'https://i.imgur.com/R6fGIgj.jpeg',
     alt: 'Création personnalisée - Finition élégante'
   },
   {
@@ -17,10 +17,6 @@ const images = [
   {
     url: 'https://i.imgur.com/hEyz2OY.jpeg',
     alt: 'Création personnalisée - Design innovant'
-  },
-  {
-    url: 'https://i.imgur.com/OR5Hmf0.jpeg',
-    alt: 'Création personnalisée - Finition premium'
   }
 ];
 
@@ -28,6 +24,17 @@ const CustomCreations = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const handleImageClick = () => {
+    setSelectedImage(images[currentIndex].url);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    document.body.style.overflow = '';
+  };
 
   const showNext = () => {
     if (!isAnimating) {
@@ -106,11 +113,12 @@ const CustomCreations = () => {
           >
             <div 
               className="relative aspect-[16/9] overflow-hidden group"
+              onClick={handleImageClick}
             >
               <img
                 src={images[currentIndex].url}
                 alt={images[currentIndex].alt}
-                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 cursor-pointer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
@@ -132,6 +140,27 @@ const CustomCreations = () => {
             ))}
           </div>
         </div>
+        
+        {/* Fullscreen Modal */}
+        {selectedImage && (
+          <div 
+            className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center"
+            onClick={closeModal}
+          >
+            <button
+              className="absolute top-4 right-4 p-2 text-white/80 hover:text-white transition-colors"
+              onClick={closeModal}
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <img
+              src={selectedImage}
+              alt="Vue agrandie"
+              className="max-h-[90vh] max-w-[90vw] object-contain"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
         
         {/* Call to Action */}
         <div className="text-center">

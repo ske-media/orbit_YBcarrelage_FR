@@ -38,8 +38,8 @@ function App() {
       <About />
       <Services />
       <CustomCreations />
-      <BeforeAfter />
       <Portfolio />
+      <BeforeAfter />
       <Partners />
       <Testimonials />
       <Contact />

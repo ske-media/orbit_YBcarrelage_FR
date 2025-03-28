@@ -10,7 +10,7 @@ const Contact = () => {
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-premium-base/10 to-transparent rounded-full transform translate-x-32 -translate-y-32" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-charcoal/10 to-transparent rounded-full transform -translate-x-24 translate-y-24" />
-
+      
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -85,63 +85,51 @@ const Contact = () => {
             <div className="glass-effect p-8 border border-khaki/20 hover-lift">
               <form
                 name="contact"
-                method="POST"
-                data-netlify="true"
+                netlify
                 netlify-honeypot="bot-field"
+                method="POST"
                 className="space-y-6"
               >
-                {/* Hidden Inputs for Netlify Forms */}
+                {/* Hidden inputs required by Netlify */}
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="redirect" value="/success" />
-
-                {/* Honeypot Field */}
                 <div hidden>
                   <input name="bot-field" />
                 </div>
-
-                {/* Form Fields */}
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-paynes-gray mb-2"
-                  >
+                <p>
+                  <label className="block text-sm font-medium text-paynes-gray mb-2">
                     Nom complet
+                    <input
+                      type="text"
+                      name="name"
+                      autoComplete="name"
+                      className="w-full px-6 py-4 premium-input"
+                      placeholder="Votre nom"
+                      required
+                    />
                   </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    autoComplete="name"
-                    className="w-full px-6 py-4 premium-input"
-                    placeholder="Votre nom"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-paynes-gray mb-2"
-                  >
+                </p>
+                <p>
+                  <label className="block text-sm font-medium text-paynes-gray mb-2">
                     Message
+                    <textarea
+                      name="message"
+                      rows={4}
+                      className="w-full px-6 py-4 premium-input resize-none"
+                      placeholder="Décrivez votre projet..."
+                      required
+                    />
                   </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    className="w-full px-6 py-4 premium-input resize-none"
-                    placeholder="Décrivez votre projet..."
-                    required
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full premium-gradient text-white py-4 sm:py-5 font-medium text-base sm:text-lg tracking-wider relative overflow-hidden group hover-lift"
-                >
-                  <span className="relative z-10">Envoyer le message</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out" />
-                </button>
+                </p>
+                <p>
+                  <button
+                    type="submit"
+                    className="w-full premium-gradient text-white py-4 sm:py-5 font-medium text-base sm:text-lg tracking-wider relative overflow-hidden group hover-lift"
+                  >
+                    <span className="relative z-10">Envoyer le message</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/20 to-transparent transform -skew-x-12 translate-x-full group-hover:translate-x-0 transition-transform duration-1000 ease-out" />
+                  </button>
+                </p>
               </form>
             </div>
           </div>

@@ -83,6 +83,7 @@ const Contact = () => {
               <form
                 name="contact"
                 method="POST"
+                action="/success"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
                 className="space-y-6"

@@ -2,6 +2,26 @@ import React from 'react';
 import { Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
+  // Handler for AJAX form submission
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString()
+    })
+      .then(() => {
+        // Redirect to the success page upon successful submission
+        window.location.assign("/success");
+      })
+      .catch((error) => {
+        alert("Une erreur s'est produite lors de l'envoi du formulaire : " + error);
+      });
+  };
+
   return (
     <section
       id="contact"
@@ -81,20 +101,19 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* AJAX Contact Form */}
             <div className="glass-effect p-8 border border-khaki/20 hover-lift">
               <form
                 name="contact"
                 method="POST"
                 netlify
                 netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* Champs cachés pour Netlify Forms */}
+                {/* Hidden field required by Netlify Forms */}
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="redirect" value="/success" />
-
-                {/* Honeypot */}
+                {/* Honeypot field */}
                 <div hidden>
                   <input name="bot-field" />
                 </div>

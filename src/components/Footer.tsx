@@ -126,7 +126,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-premium-base transition-colors inline-flex items-center gap-1"
               >
-                Développé par Steven C. K. ELDRING - Agence ORBIT
+                🚀 Développé par Steven C. K. ELDRING - Agence ORBIT
               </a>
             </p>
             <button

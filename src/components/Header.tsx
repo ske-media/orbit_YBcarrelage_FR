@@ -2,10 +2,22 @@ import React from 'react';
 import { Menu, Phone, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
+const getMenuItems = (isLegalPage: boolean) => {
+  const baseItems = [
+    { label: 'Accueil', href: '/' },
+    { label: 'Services', href: isLegalPage ? '/#services' : '#services' },
+    { label: 'Réalisations', href: isLegalPage ? '/#portfolio' : '#portfolio' },
+    { label: 'Témoignages', href: isLegalPage ? '/#testimonials' : '#testimonials' },
+    { label: 'Contact', href: isLegalPage ? '/#contact' : '#contact' },
+  ];
+  return baseItems;
+};
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth < 1024);
+  const isLegalPage = window.location.pathname === '/legal';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,13 +40,7 @@ const Header = () => {
     };
   }, []);
 
-  const menuItems = [
-    { label: 'Accueil', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Réalisations', href: '#portfolio' },
-    { label: 'Témoignages', href: '#testimonials' },
-    { label: 'Contact', href: '#contact' },
-  ];
+  const menuItems = getMenuItems(isLegalPage);
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
@@ -43,7 +49,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center -my-4">
-            <a href="#home" className="block">
+            <a href={isLegalPage ? '/' : '#home'} className="block">
               <img
                 src="https://i.imgur.com/RmvgGXO.png"
                 alt="YB Carrelage"

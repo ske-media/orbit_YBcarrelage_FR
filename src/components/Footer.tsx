@@ -110,6 +110,11 @@ const Footer = () => {
                   Contact
                 </a>
               </li>
+              <li className="bg-white/5 px-6 py-3">
+                <a href="/legal" className="text-gray-300 hover:text-premium-base transition-colors block">
+                  Mentions Légales
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -119,6 +124,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
               © {new Date().getFullYear()} YB Carrelage. Tous droits réservés.
+              <span className="mx-2">|</span>
+              <a href="/legal" className="text-gray-400 hover:text-premium-base transition-colors">
+                Mentions Légales
+              </a>
               <span className="mx-2">|</span>
               <a
                 href="https://agence-orbit.ch/"

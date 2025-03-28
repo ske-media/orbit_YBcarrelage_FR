@@ -9,6 +9,7 @@ import Portfolio from './components/Portfolio.tsx';
 import Partners from './components/Partners.tsx';
 import Testimonials from './components/Testimonials.tsx';
 import Contact from './components/Contact.tsx';
+import Legal from './components/Legal.tsx';
 import { useEffect } from 'react';
 import Footer from './components/Footer';
 
@@ -32,17 +33,23 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <Header />
-      <Hero />
-      <About />
-      <Portfolio />
-      <BeforeAfter />
-      <Services />
-      <CustomCreations />
-      <Partners />
-      <Testimonials />
-      <Contact />
+      {window.location.pathname === '/legal' ? (
+        <Legal />
+      ) : (
+        <>
+          <Hero />
+          <About />
+          <Portfolio />
+          <BeforeAfter />
+          <Services />
+          <CustomCreations />
+          <Partners />
+          <Testimonials />
+          <Contact />
+        </>
+      )}
       <Footer />
     </div>
   );

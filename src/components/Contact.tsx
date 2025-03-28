@@ -73,17 +73,35 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="glass-effect p-8 border border-khaki/20 hover-lift">
-              <form className="space-y-6">
+            <div className="glass-effect p-8 border border-khaki/20 hover-lift relative">
+              {/* Hidden form for Netlify bot detection */}
+              <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+                <input type="text" name="name" />
+                <textarea name="message"></textarea>
+              </form>
+              
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                className="space-y-6"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <div hidden>
+                  <input name="bot-field" />
+                </div>
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-paynes-gray mb-2">
                     Nom complet
                   </label>
                   <input
                     type="text"
+                    name="name"
                     id="name"
                     className="w-full px-6 py-4 premium-input"
                     placeholder="Votre nom"
+                    required
                   />
                 </div>
 
@@ -92,10 +110,12 @@ const Contact = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
                     id="message"
                     rows={4}
                     className="w-full px-6 py-4 premium-input resize-none"
                     placeholder="Décrivez votre projet..."
+                    required
                   />
                 </div>
 

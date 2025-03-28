@@ -10,7 +10,7 @@ const Contact = () => {
       {/* Decorative Elements */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-premium-base/10 to-transparent rounded-full transform translate-x-32 -translate-y-32" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-charcoal/10 to-transparent rounded-full transform -translate-x-24 translate-y-24" />
-      
+
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -85,17 +85,20 @@ const Contact = () => {
             <div className="glass-effect p-8 border border-khaki/20 hover-lift">
               <form
                 name="contact"
+                method="POST"
                 netlify
                 netlify-honeypot="bot-field"
-                method="POST"
                 className="space-y-6"
               >
-                {/* Hidden inputs required by Netlify */}
+                {/* Champs cachés pour Netlify Forms */}
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="redirect" value="/success" />
+
+                {/* Honeypot */}
                 <div hidden>
                   <input name="bot-field" />
                 </div>
+
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">
                     Nom complet
@@ -109,6 +112,7 @@ const Contact = () => {
                     />
                   </label>
                 </p>
+
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">
                     Message
@@ -121,6 +125,7 @@ const Contact = () => {
                     />
                   </label>
                 </p>
+
                 <p>
                   <button
                     type="submit"

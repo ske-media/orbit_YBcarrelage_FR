@@ -13,6 +13,7 @@ import Legal from './components/Legal';
 import Footer from './components/Footer';
 
 const App = () => {
+  // Observer for fade-up animations
   useEffect(() => {
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
@@ -28,6 +29,7 @@ const App = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Render the correct page based on the URL pathname
   const renderPage = () => {
     const path = window.location.pathname;
     if (path === '/legal') {

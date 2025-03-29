@@ -2,23 +2,25 @@ import React from 'react';
 import { Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
-  // Handler for AJAX form submission
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
 
+    // Encode form data as URL-encoded string
+    const encodedData = new URLSearchParams(formData).toString();
+
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString()
+      body: encodedData,
     })
       .then(() => {
-        // Redirect to the success page upon successful submission
+        // Redirige vers la page de succès en cas de succès
         window.location.assign("/success");
       })
       .catch((error) => {
-        alert("Une erreur s'est produite lors de l'envoi du formulaire : " + error);
+        alert("Erreur lors de l'envoi du formulaire : " + error);
       });
   };
 
@@ -111,9 +113,10 @@ const Contact = () => {
                 onSubmit={handleSubmit}
                 className="space-y-6"
               >
-                {/* Hidden field required by Netlify Forms */}
+                {/* Champs cachés requis pour Netlify Forms */}
                 <input type="hidden" name="form-name" value="contact" />
-                {/* Honeypot field */}
+
+                {/* Champ honeypot */}
                 <div hidden>
                   <input name="bot-field" />
                 </div>

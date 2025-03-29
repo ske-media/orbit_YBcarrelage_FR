@@ -3,22 +3,24 @@ import emailjs from '@emailjs/browser';
 import { Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    emailjs.sendForm('service_qp7gu68', 'template_qg0e2t9', form.current, 'ufS5ElzBRy9OlUkH1')
-      .then(
-        (result) => {
-          console.log('Message envoyé avec succès:', result.text);
-          window.location.assign('/success'); // Redirige vers la page de succès
-        },
-        (error) => {
-          console.error('Erreur lors de l\'envoi du message:', error.text);
-          alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.');
-        }
-      );
+    if (form.current) {
+      emailjs.sendForm('service_qp7gu68', 'template_qg0e2t9', form.current, 'ufS5ElzBRy9OlUkH1')
+        .then(
+          (result) => {
+            console.log('Message envoyé avec succès:', result.text);
+            window.location.assign('/success'); // Redirige vers la page de succès
+          },
+          (error) => {
+            console.error('Erreur lors de l\'envoi du message:', error.text);
+            alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.');
+          }
+        );
+    }
   };
 
   return (
@@ -37,7 +39,7 @@ const Contact = () => {
               Contactez-nous
             </h2>
             <p className="text-custom-gray max-w-2xl mx-auto">
-              Nous sommes à votre écoute pour un accompagnement sur-mesure et des finitions irréprochables.
+              Nous sommes à votre écoute pour un accompagnement sur mesure et des finitions irréprochables.
             </p>
           </div>
 
@@ -142,8 +144,8 @@ const Contact = () => {
                       required
                     />
                   </label>
-                               </p>
-
+                </p>
+                
                 <p>
                   <button
                     type="submit"

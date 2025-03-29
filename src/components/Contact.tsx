@@ -1,27 +1,24 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Phone, MapPin, Clock } from 'lucide-react';
 
 const Contact = () => {
+  const form = useRef();
+
   const handleSubmit = (event) => {
     event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
 
-    // Encode form data as URL-encoded string
-    const encodedData = new URLSearchParams(formData).toString();
-
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encodedData,
-    })
-      .then(() => {
-        // Redirige vers la page de succès en cas de succès
-        window.location.assign("/success");
-      })
-      .catch((error) => {
-        alert("Erreur lors de l'envoi du formulaire : " + error);
-      });
+    emailjs.sendForm('service_qp7gu68', 'template_qg0e2t9', form.current, 'ufS5ElzBRy9OlUkH1')
+      .then(
+        (result) => {
+          console.log('Message envoyé avec succès:', result.text);
+          window.location.assign('/success'); // Redirige vers la page de succès
+        },
+        (error) => {
+          console.error('Erreur lors de l\'envoi du message:', error.text);
+          alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.');
+        }
+      );
   };
 
   return (
@@ -29,7 +26,7 @@ const Contact = () => {
       id="contact"
       className="relative py-20 bg-gradient-to-br from-white via-white to-khaki/10 overflow-hidden"
     >
-      {/* Decorative Elements */}
+      {/* Éléments décoratifs */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-premium-base/10 to-transparent rounded-full transform translate-x-32 -translate-y-32" />
       <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-charcoal/10 to-transparent rounded-full transform -translate-x-24 translate-y-24" />
 
@@ -45,7 +42,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Contact Information */}
+            {/* Informations de contact */}
             <div className="space-y-8 p-8 glass-effect border border-khaki/20 hover-lift">
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 premium-gradient flex items-center justify-center transform hover:scale-110 transition-transform duration-700">
@@ -103,33 +100,32 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* AJAX Contact Form */}
+            {/* Formulaire de contact */}
             <div className="glass-effect p-8 border border-khaki/20 hover-lift">
-              <form
-                name="contact"
-                method="POST"
-                netlify
-                netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-                className="space-y-6"
-              >
-                {/* Champs cachés requis pour Netlify Forms */}
-                <input type="hidden" name="form-name" value="contact" />
-
-                {/* Champ honeypot */}
-                <div hidden>
-                  <input name="bot-field" />
-                </div>
-
+              <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">
                     Nom complet
                     <input
                       type="text"
-                      name="name"
+                      name="user_name"
                       autoComplete="name"
                       className="w-full px-6 py-4 premium-input"
                       placeholder="Votre nom"
+                      required
+                    />
+                  </label>
+                </p>
+
+                <p>
+                  <label className="block text-sm font-medium text-paynes-gray mb-2">
+                    Adresse e-mail
+                    <input
+                      type="email"
+                      name="user_email"
+                      autoComplete="email"
+                      className="w-full px-6 py-4 premium-input"
+                      placeholder="Votre adresse e-mail"
                       required
                     />
                   </label>
@@ -146,7 +142,7 @@ const Contact = () => {
                       required
                     />
                   </label>
-                </p>
+                               </p>
 
                 <p>
                   <button

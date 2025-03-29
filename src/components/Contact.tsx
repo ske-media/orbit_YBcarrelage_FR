@@ -120,18 +120,19 @@ const Contact = () => {
                 </p>
 
                 <p>
-                  <label className="block text-sm font-medium text-paynes-gray mb-2">
-                    Adresse e-mail
-                    <input
-                      type="email"
-                      name="user_email"
-                      autoComplete="email"
-                      className="w-full px-6 py-4 premium-input"
-                      placeholder="Votre adresse e-mail"
-                      required
-                    />
-                  </label>
-                </p>
+  <label className="block text-sm font-medium text-paynes-gray mb-2">
+    Numéro de téléphone
+    <input
+      type="tel"
+      name="user_phone"
+      autoComplete="tel"
+      className="w-full px-6 py-4 premium-input"
+      placeholder="Votre numéro de téléphone"
+      required
+    />
+  </label>
+</p>
+
 
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">

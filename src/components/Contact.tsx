@@ -54,21 +54,12 @@ const Contact = () => {
                   <h3 className="font-semibold text-paynes-gray mb-1">Téléphone</h3>
                   <div className="space-y-2">
                     <div>
-                      <span className="text-sm text-custom-gray">Suisse :</span>
+                      <span className="text-sm text-custom-gray">Ligne directe :</span>
                       <a
                         href="tel:+41765480001"
                         className="block text-custom-gray hover:text-premium-base transition-colors"
                       >
                         +41 76 548 00 01
-                      </a>
-                    </div>
-                    <div>
-                      <span className="text-sm text-custom-gray">France :</span>
-                      <a
-                        href="tel:+33770151468"
-                        className="block text-custom-gray hover:text-premium-base transition-colors"
-                      >
-                        +33 7 70 15 14 68
                       </a>
                     </div>
                   </div>

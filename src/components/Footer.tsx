@@ -142,7 +142,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-center">🛠️ Dernier test le 2 avril 2025</p>
     </footer>
   );
 };

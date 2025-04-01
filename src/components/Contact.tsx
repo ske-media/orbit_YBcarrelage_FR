@@ -56,10 +56,10 @@ const Contact = () => {
                     <div>
                       <span className="text-sm text-custom-gray">Ligne directe :</span>
                       <a
-                        href="tel:+41765480001"
+                        href="tel:+33770151468"
                         className="block text-custom-gray hover:text-premium-base transition-colors"
                       >
-                        +41 76 548 00 01
+                        +33 7 70 15 14 68
                       </a>
                     </div>
                   </div>
@@ -137,7 +137,7 @@ const Contact = () => {
                     />
                   </label>
                 </p>
-                
+                <input type="hidden" name="site_version" value="France 🇫🇷" />
                 <p>
                   <button
                     type="submit"

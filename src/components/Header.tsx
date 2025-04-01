@@ -86,11 +86,11 @@ const Header = () => {
 
           {/* Contact Button */}
           <a
-            href="tel:+41765480001"
+            href="tel:+33770151468"
             className="hidden lg:flex items-center px-6 py-3 premium-gradient backdrop-blur-sm text-white transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 group"
           >
             <Phone size={18} className="mr-2" />
-            <span className="group-hover:tracking-wider transition-all duration-300">+41 76 548 00 01</span>
+            <span className="group-hover:tracking-wider transition-all duration-300">+33 7 70 15 14 68</span>
           </a>
         </div>
 

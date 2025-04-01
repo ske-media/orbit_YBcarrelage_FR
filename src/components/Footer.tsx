@@ -68,14 +68,14 @@ const Footer = () => {
                   <div>
                     <span className="text-sm text-gray-400">Ligne directe :</span>
                     <a href="tel:+41765480001" className="block hover:text-premium-base transition-colors">
-                      +41 76 548 00 01
+                    +33 7 70 15 14 68
                     </a>
                   </div>
                 </div>
               </li>
               <li className="flex items-start justify-center md:justify-start text-gray-300 bg-white/5 px-6 py-3">
                 <MapPin className="w-5 h-5 mr-3 text-premium-base flex-shrink-0 mt-1" />
-                <span>Canton de Genève, Vaud et alentours</span>
+                <span>Annemasse et alentours</span>
               </li>
             </ul>
           </div>

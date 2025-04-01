@@ -25,4 +25,4 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /sites/ybcarrelage.com/
-
+          dangerous-clean-slate: true

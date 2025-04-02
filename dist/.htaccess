@@ -9,4 +9,3 @@ RewriteRule ^ index.html [QSA,L]
 
 # Sécurité Git
 RedirectMatch 404 /\.git
-# Force update

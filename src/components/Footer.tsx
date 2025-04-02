@@ -67,7 +67,7 @@ const Footer = () => {
                 <div className="flex flex-col">
                   <div>
                     <span className="text-sm text-gray-400">Ligne directe :</span>
-                    <a href="tel:+41765480001" className="block hover:text-premium-base transition-colors">
+                    <a href="tel:+33770151468" className="block hover:text-premium-base transition-colors">
                     +33 7 70 15 14 68
                     </a>
                   </div>

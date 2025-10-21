@@ -7,22 +7,6 @@ const images = [
     alt: 'Création personnalisée - Design moderne'
   },
   {
-    url: 'https://i.imgur.com/R6fGIgj.jpeg',
-    alt: 'Création personnalisée - Finition élégante'
-  },
-  {
-    url: 'https://i.imgur.com/ySRoW2C.jpeg',
-    alt: 'Création personnalisée - Style contemporain'
-  },
-  {
-    url: 'https://i.imgur.com/hEyz2OY.jpeg',
-    alt: 'Création personnalisée - Design innovant'
-  },
-  {
-    url: 'https://i.imgur.com/WKnd7dx.jpeg',
-    alt: 'Création personnalisée - Robinet élégant'
-  },
-  {
     url: 'https://i.imgur.com/3QRXAld.jpeg',
     alt: 'Création personnalisée - Magnifique lavabo en pierre'
   },
@@ -37,6 +21,10 @@ const images = [
   {
     url: 'https://i.imgur.com/02FFd4Y.jpeg',
     alt: 'Création personnalisée - Magnifique interrupteur en marbre'
+  },
+  {
+    url: 'https://i.imgur.com/hEyz2OY.jpeg',
+    alt: 'Création personnalisée - Design innovant'
   }
 ];
 

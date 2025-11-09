@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Instagram, ArrowUp } from 'lucide-react';
+import { Phone, MapPin, Instagram, ArrowUp, Mail } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -63,12 +63,18 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-xl mb-6">Contact</h3>
             <ul className="space-y-4 w-full">
               <li className="flex items-center justify-center md:justify-start text-gray-300 bg-white/5 px-6 py-3">
+                <Mail className="w-5 h-5 mr-3 text-premium-base flex-shrink-0" />
+                <a href="mailto:info@yb-carrelage.com" className="hover:text-premium-base transition-colors">
+                  info@yb-carrelage.com
+                </a>
+              </li>
+              <li className="flex items-center justify-center md:justify-start text-gray-300 bg-white/5 px-6 py-3">
                 <Phone className="w-5 h-5 mr-3 text-premium-base" />
                 <div className="flex flex-col">
                   <div>
                     <span className="text-sm text-gray-400">Ligne directe :</span>
                     <a href="tel:+33770151468" className="block hover:text-premium-base transition-colors">
-                    +33 7 70 15 14 68
+                      +33 7 70 15 14 68
                     </a>
                   </div>
                 </div>

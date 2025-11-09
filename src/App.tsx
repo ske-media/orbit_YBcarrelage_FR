@@ -34,26 +34,29 @@ const App = () => {
     const path = window.location.pathname;
     if (path === '/legal') {
       return <Legal />;
-    } else if (path === '/success') {
-      return (
-        <div className="min-h-screen bg-white py-32">
-          <div className="container mx-auto px-4 max-w-4xl text-center">
-            <h1 className="text-4xl font-bold text-paynes-gray mb-8 font-heading">
-              Message envoyé avec succès !
-            </h1>
-            <p className="text-custom-gray mb-8">
-              Merci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.
-            </p>
-            <a
-              href="/"
-              className="inline-flex items-center px-8 py-4 premium-gradient text-white text-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
-            >
-              Retour à l'accueil
-            </a>
-          </div>
-        </div>
-      );
-    } else {
+    } 
+    // Route /success commentée - non utilisée depuis le remplacement du formulaire par contact par email
+    // else if (path === '/success') {
+    //   return (
+    //     <div className="min-h-screen bg-white py-32">
+    //       <div className="container mx-auto px-4 max-w-4xl text-center">
+    //         <h1 className="text-4xl font-bold text-paynes-gray mb-8 font-heading">
+    //           Message envoyé avec succès !
+    //         </h1>
+    //         <p className="text-custom-gray mb-8">
+    //           Merci de nous avoir contacté. Nous vous répondrons dans les plus brefs délais.
+    //         </p>
+    //         <a
+    //           href="/"
+    //           className="inline-flex items-center px-8 py-4 premium-gradient text-white text-lg font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+    //         >
+    //           Retour à l'accueil
+    //         </a>
+    //       </div>
+    //     </div>
+    //   );
+    // } 
+    else {
       return (
         <>
           <Hero />

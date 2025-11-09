@@ -1,27 +1,29 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import React from 'react';
+// import React, { useRef } from 'react';
+// import emailjs from '@emailjs/browser';
+import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 
 const Contact = () => {
-  const form = useRef<HTMLFormElement>(null);
+  // Formulaire EmailJS commenté - remplacé par contact par email
+  // const form = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
 
-    if (form.current) {
-      emailjs.sendForm('service_qp7gu68', 'template_qg0e2t9', form.current, 'ufS5ElzBRy9OlUkH1')
-        .then(
-          (result) => {
-            console.log('Message envoyé avec succès:', result.text);
-            window.location.assign('/success'); // Redirige vers la page de succès
-          },
-          (error) => {
-            console.error('Erreur lors de l\'envoi du message:', error.text);
-            alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.');
-          }
-        );
-    }
-  };
+  //   if (form.current) {
+  //     emailjs.sendForm('service_qp7gu68', 'template_qg0e2t9', form.current, 'ufS5ElzBRy9OlUkH1')
+  //       .then(
+  //         (result) => {
+  //           console.log('Message envoyé avec succès:', result.text);
+  //           window.location.assign('/success'); // Redirige vers la page de succès
+  //         },
+  //         (error) => {
+  //           console.error('Erreur lors de l\'envoi du message:', error.text);
+  //           alert('Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer plus tard.');
+  //         }
+  //       );
+  //   }
+  // };
 
   return (
     <section
@@ -38,14 +40,35 @@ const Contact = () => {
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 font-heading bg-gradient-to-r from-paynes-gray to-charcoal bg-clip-text text-transparent">
               Contactez-nous
             </h2>
-            <p className="text-custom-gray max-w-2xl mx-auto">
+            <p className="text-custom-gray max-w-2xl mx-auto mb-6">
               Nous sommes à votre écoute pour un accompagnement sur mesure et des finitions irréprochables.
+            </p>
+            <p className="text-custom-gray max-w-2xl mx-auto text-lg">
+              Pour toute demande de devis ou information, contactez-nous par email. Nous vous répondrons dans les plus brefs délais.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Informations de contact */}
             <div className="space-y-8 p-8 glass-effect border border-khaki/20 hover-lift">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-12 h-12 premium-gradient flex items-center justify-center transform hover:scale-110 transition-transform duration-700">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="font-semibold text-paynes-gray mb-1">Email</h3>
+                  <a
+                    href="mailto:info@yb-carrelage.com"
+                    className="block text-custom-gray hover:text-premium-base transition-colors text-lg font-medium"
+                  >
+                    info@yb-carrelage.com
+                  </a>
+                  <p className="text-sm text-custom-gray mt-2">
+                    Cliquez sur l'adresse pour nous envoyer un email
+                  </p>
+                </div>
+              </div>
+
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 premium-gradient flex items-center justify-center transform hover:scale-110 transition-transform duration-700">
                   <Phone className="w-6 h-6 text-white" />
@@ -93,8 +116,61 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Formulaire de contact */}
+            {/* Section d'information pour le contact par email */}
             <div className="glass-effect p-8 border border-khaki/20 hover-lift">
+              <h3 className="text-xl font-semibold text-paynes-gray mb-6 font-heading">
+                Comment nous contacter
+              </h3>
+              <p className="text-custom-gray mb-6 leading-relaxed">
+                Pour toute demande de devis, renseignement ou projet de carrelage, envoyez-nous un email à l'adresse ci-contre. 
+                Nous vous répondrons dans les plus brefs délais pour discuter de votre projet.
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="font-semibold text-paynes-gray mb-3">
+                  Dans votre message, merci d'inclure :
+                </h4>
+                <ul className="space-y-2 text-custom-gray">
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>Vos coordonnées (nom, téléphone)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>La nature de votre projet (pose, rénovation, création sur mesure)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>Le type de carrelage souhaité (format, matériau, style)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>Les dimensions et la surface à carreler</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>Vos dates souhaitées pour la réalisation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-premium-base mr-2">•</span>
+                    <span>Toute autre information pertinente sur votre projet</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-khaki/20">
+                <a
+                  href="mailto:info@yb-carrelage.com"
+                  className="inline-flex items-center px-6 py-3 premium-gradient text-white text-base font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <Mail className="w-5 h-5 mr-2" />
+                  Envoyer un email
+                </a>
+              </div>
+            </div>
+
+            {/* Formulaire de contact - Commenté (remplacé par contact par email) */}
+            {/* <div className="glass-effect p-8 border border-khaki/20 hover-lift">
               <form ref={form} onSubmit={handleSubmit} className="space-y-6">
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">
@@ -111,19 +187,18 @@ const Contact = () => {
                 </p>
 
                 <p>
-  <label className="block text-sm font-medium text-paynes-gray mb-2">
-    Numéro de téléphone
-    <input
-      type="tel"
-      name="user_phone"
-      autoComplete="tel"
-      className="w-full px-6 py-4 premium-input"
-      placeholder="Votre numéro de téléphone"
-      required
-    />
-  </label>
-</p>
-
+                  <label className="block text-sm font-medium text-paynes-gray mb-2">
+                    Numéro de téléphone
+                    <input
+                      type="tel"
+                      name="user_phone"
+                      autoComplete="tel"
+                      className="w-full px-6 py-4 premium-input"
+                      placeholder="Votre numéro de téléphone"
+                      required
+                    />
+                  </label>
+                </p>
 
                 <p>
                   <label className="block text-sm font-medium text-paynes-gray mb-2">
@@ -148,7 +223,7 @@ const Contact = () => {
                   </button>
                 </p>
               </form>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

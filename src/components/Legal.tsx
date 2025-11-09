@@ -16,7 +16,7 @@ const Legal = () => {
               <li><strong>Numéro SIRET / RCS :</strong> 94818820600015</li>
               <li><strong>Adresse du siège social :</strong> 15 Rue de Sous Cassan, 74100 Annemasse, France</li>
               <li><strong>Numéro de téléphone :</strong> +33 7 70 15 14 68</li>
-              <li><strong>Adresse e-mail de contact :</strong> info@yb-carrelage.com</li>
+              <li><strong>Adresse e-mail de contact :</strong> info@ybcarrelage.com</li>
             </ul>
           </section>
 
@@ -56,7 +56,7 @@ const Legal = () => {
               de rectification et de suppression des données personnelles en contactant :
             </p>
             <ul className="space-y-2 text-custom-gray">
-              <li><strong>E-mail de contact RGPD :</strong> info@yb-carrelage.com</li>
+              <li><strong>E-mail de contact RGPD :</strong> info@ybcarrelage.com</li>
               <li><strong>Adresse postale pour les demandes :</strong> 15 Rue de Sous Cassan, 74100 Annemasse, France</li>
             </ul>
           </section>

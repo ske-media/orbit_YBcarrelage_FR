@@ -58,10 +58,10 @@ const Contact = () => {
                 <div className="ml-4">
                   <h3 className="font-semibold text-paynes-gray mb-1">Email</h3>
                   <a
-                    href="mailto:info@yb-carrelage.com"
+                    href="mailto:info@ybcarrelage.com"
                     className="block text-custom-gray hover:text-premium-base transition-colors text-lg font-medium"
                   >
-                    info@yb-carrelage.com
+                    info@ybcarrelage.com
                   </a>
                   <p className="text-sm text-custom-gray mt-2">
                     Cliquez sur l'adresse pour nous envoyer un email
@@ -160,7 +160,7 @@ const Contact = () => {
 
               <div className="mt-8 pt-6 border-t border-khaki/20">
                 <a
-                  href="mailto:info@yb-carrelage.com"
+                  href="mailto:info@ybcarrelage.com"
                   className="inline-flex items-center px-6 py-3 premium-gradient text-white text-base font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
                 >
                   <Mail className="w-5 h-5 mr-2" />

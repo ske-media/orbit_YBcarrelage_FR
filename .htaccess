@@ -2,6 +2,10 @@
 RewriteEngine On
 RewriteBase /
 
+# Redirection forcée de ybcarrelage.fr vers ybcarrelage.com
+RewriteCond %{HTTP_HOST} ^(www\.)?ybcarrelage\.fr$ [NC]
+RewriteRule ^ https://ybcarrelage.com%{REQUEST_URI} [R=301,L,NE]
+
 # Redirige toutes les requêtes vers index.html sauf si fichier/dossier existe
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
